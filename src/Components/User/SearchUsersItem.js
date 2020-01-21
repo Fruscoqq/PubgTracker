@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 
 const SearchUsersItem = ({ user: { p_name, p_id } }) => {
   return (
@@ -7,6 +7,7 @@ const SearchUsersItem = ({ user: { p_name, p_id } }) => {
       {/* <Link to={`/Player/${p_id}`}>
         <h1>{p_name}</h1>
       </Link> */}
+      <h4>DemoText</h4>
     </div>
   )
 }

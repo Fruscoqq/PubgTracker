@@ -1,0 +1,23 @@
+*{
+  border-radius: 0 !important;
+}
+
+body {
+  background:linear-gradient(rgba(11, 107, 216, 0.3), rgba(226, 157, 9, 0.3)), url('./images/wp2462417.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.navbar {
+  background: transparent;
+}
+
+.card{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.demoParent:nth-child(1) {
+  background: red;
+}
