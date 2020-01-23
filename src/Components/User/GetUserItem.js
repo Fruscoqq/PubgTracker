@@ -17,7 +17,7 @@ const GetUserItem = ({ user }) => {
   }
 
   return (
-    (rank % 2) === 0 ? (<div className="card-body bg-light">
+    (rank % 2) === 0 ? (<div className="card-body bg-dark">
       <div className="row">
         <div className="col-1">
           <p className="card-text">{rank}</p>

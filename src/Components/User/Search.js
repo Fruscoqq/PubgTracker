@@ -23,10 +23,14 @@ const Search = (props) => {
   }
 
   return (
-    <div className="div">
+    <div className="div search">
       <form className="form-group" onSubmit={onSubmit}>
-        <input type="text" name="text" className="form-control my-3" placeholder="Search Users" onChange={onChange} />
-        <input type="submit" value="Search" className="btn btn-dark btn-block" />
+        <div className="searchText text-center text-uppercase text-light">
+          <h1 className="display-4">Check your PUBG stats</h1>
+          <h1 className="display-4"><span>fast</span> and <span>easy</span></h1>
+        </div>
+        <input type="text" name="text" className="form-control my-3 searchInput" placeholder="Search Users" onChange={onChange} />
+        <input type="submit" value="Search" className="btn btn-primary btn-block searchBtn" />
       </form>
       {/* <SearchUsers /> */}
     </div>

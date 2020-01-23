@@ -6,6 +6,8 @@ import Search from './Components/User/Search';
 import User from './Components/User/User';
 import LeaderUserItem from './Components/User/LeaderUserItem';
 import Spinner from './Components/Layout/Spinner';
+import Overlay from './Components/Layout/Overlay';
+import Footer from './Components/Layout/Footer';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 
@@ -14,18 +16,19 @@ function App() {
     <Router>
       <Rs6State>
         <div className="App">
+          <Overlay />
           <Navbar />
           <div className="container">
             <Route exact path="/" component={Search} />
             <Route exact path="/Player/Leaderboard" component={GetUsers} />
-            <Route exact path="/Player/Stats" component={User} />
             <Spinner />
+            <Route exact path="/Player/Stats" component={User} />
             <Switch>
               <Route exact path="/Player/LeaderItem/:id" render={props => (
                 <LeaderUserItem {...props} />
               )} />
             </Switch>
-
+            <Footer />
           </div>
         </div>
       </Rs6State>

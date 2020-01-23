@@ -1,16 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 *{
-  border-radius: 0 !important;
+  border-radius: 2px !important;
 }
 
 body {
-  background:linear-gradient(rgba(11, 107, 216, 0.6), rgba(255,139,43,0.6)), url('./images/wp2462417.png') no-repeat;
+  background:linear-gradient(rgb(43, 44, 46), rgba(255,139,43,0.6)), url('./images/wp2462417.png') no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  text-decoration: none ;
+  // font-family: 'Bangers', cursive !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  // max-width: 100%;
+}
+
+.spinner {
+  z-index: 10;
+  position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background-color: rgba(0,0,0,0.5); /*dim the background*/
+  transition: all .5s ease;
 }
 
 .navbar {
   background: transparent;
+  z-index: 1 !important;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0 3rem 0 3rem;
+
+  .nav-link {
+    color: #f3e9e9 !important;
+    font-weight: 500;
+    transition: .3s all ease-in;
+  
+    &:hover {
+      color: #FF8B2B !important;
+    }
+  }
+}
+
+.search {
+  // background: #FF8B2B;
+  height: 78vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: 60%;
+
+  .form-group {
+    background:linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2));
+    padding: 1rem;
+    border-radius: 6px !important;
+  }
+
+  .searchInput {
+    // width: 50% !important;
+    margin: 0 auto;
+    border-bottom: 0 none;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46) !important;
+  }
+
+  .searchBtn {
+    margin: 0 auto;
+    background: #FF8B2B;
+    border: none;
+    font-weight: 400;
+    width: 40% !important;
+  
+    &:hover {
+      background: rgb(212, 121, 46);
+    }
+  }
+
+  .searchText h1 span{
+    color: #FF8B2B;
+    font-weight: 600;
+  }
 }
 
 .card{
@@ -18,6 +102,4 @@ body {
   padding: 0 !important;
 }
 
-.demoParent:nth-child(1) {
-  background: red;
-}
+
