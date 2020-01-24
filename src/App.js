@@ -18,7 +18,7 @@ function App() {
         <div className="App">
           <Overlay />
           <Navbar />
-          <div className="container">
+          <div className="myContainer">
             <Route exact path="/" component={Search} />
             <Route exact path="/Player/Leaderboard" component={GetUsers} />
             <Spinner />

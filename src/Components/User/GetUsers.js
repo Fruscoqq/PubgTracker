@@ -27,15 +27,14 @@ const GetUsers = () => {
   })
 
   return (
-    <div className="text-center card">
+    <div className="text-center bg-info my-5 cardParent">
       <div className="card-body">
-        <h3 className="py-3">Current season stats</h3>
         <div className="row">
           <div className="col-1">Rank</div>
-          <div className="col-2">Name</div>
+          <div className="col-2">Username</div>
           <div className="col-2">Wins</div>
-          <div className="col-2">Games</div>
-          <div className="col-1">K/D</div>
+          <div className="col-1">Games</div>
+          <div className="col-2">K/D</div>
           <div className="col-2">Avg Damage</div>
           <div className="col-2">Win Ratio</div>
         </div>

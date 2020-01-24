@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+$primary-color: #F2A900;
+
 *{
   border-radius: 2px !important;
+  text-decoration: none !important;
 }
 
 body {
@@ -12,11 +16,12 @@ body {
   background-attachment: fixed;
   text-decoration: none ;
   // font-family: 'Bangers', cursive !important;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Muli', sans-serif;
 }
 
-.container {
-  // max-width: 100%;
+.myContainer {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .spinner {
@@ -36,7 +41,7 @@ body {
   height: 100%;
   z-index: 4;
   background-color: rgba(0,0,0,0.5); /*dim the background*/
-  transition: all .5s ease;
+  transition: all 1s ease;
 }
 
 .navbar {
@@ -49,22 +54,22 @@ body {
   .nav-link {
     color: #f3e9e9 !important;
     font-weight: 500;
-    transition: .3s all ease-in;
+    transition: .1s all ease-in;
   
     &:hover {
-      color: #FF8B2B !important;
+      color: $primary-color !important;
     }
   }
 }
 
 .search {
-  // background: #FF8B2B;
+  // background: $primary-color;
   height: 78vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  width: 60%;
+  width: 50%;
 
   .form-group {
     background:linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2));
@@ -76,26 +81,62 @@ body {
     // width: 50% !important;
     margin: 0 auto;
     border-bottom: 0 none;
-	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46) !important;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46) !important;
+  font-size: 1.3rem;
   }
 
   .searchBtn {
     margin: 0 auto;
-    background: #FF8B2B;
+    background: $primary-color;
     border: none;
     font-weight: 400;
     width: 40% !important;
+    font-size: 1.3rem;
   
     &:hover {
       background: rgb(212, 121, 46);
     }
   }
 
+  .searchText h1{
+    font-size: 3rem;
+  }
+
   .searchText h1 span{
-    color: #FF8B2B;
+    color: $primary-color;
     font-weight: 600;
   }
 }
+
+.cardParent {
+  background: #DBDBDB !important;
+  color: #706969;
+
+  .card-text-link {
+    color: #2B2E28;
+    text-decoration: none !important;
+    font-size: .9rem;
+  }
+
+  .cardEven {
+    background: #ffffff;
+    color: #50544D;
+    transition: 0.1s all ease-in;
+
+    &:hover {
+      background: $primary-color;
+    }
+  }
+  
+  .cardOdd {
+  background: #F6F6F6;
+  transition: 0.1s all ease-in;
+  &:hover {
+    background: $primary-color;
+   }
+  }
+}
+
 
 .card{
   margin: 0 !important;
@@ -103,3 +144,74 @@ body {
 }
 
 
+.barWins {
+  background-color: #0089EF;
+}
+
+.barDmg {
+  background: #CB4A3A;
+}
+
+.userContainer {
+  background: rgba(248, 249, 250, 0.322) !important;
+}
+
+.userBottom {
+  background: rgba(220, 53, 70, 0.445);
+}
+
+.userSecond {
+  background: rgba(255, 193, 7, 0.432);
+
+  .col-8 {
+    background: rgba(0, 123, 255, 0.418);
+  }
+}
+
+.userThird {
+  background: rgba(248, 249, 250, 0.432);
+}
+
+@media only screen and(max-width: 768px) {
+  .search {
+    width: 100%;
+    font-size: 9rem;
+
+    .searchInput{
+      font-size: 1rem;
+    }
+
+    .searchBtn {
+      font-size: 1rem;
+    }
+    .searchText h1{
+      font-size: 1.3rem;
+    }
+  
+    .searchText h1 span{
+      color: $primary-color;
+      font-weight: 600;
+    }
+  }
+
+  .cardParent {
+    font-size: 0.6rem;
+
+    .cardEven {
+      font-size: 0.6rem;
+    }
+
+    .cardOdd {
+      font-size: 0.6rem;
+    }
+
+    .card-text-link {
+      font-size: 0.6rem;
+    }
+  }
+
+  .container {
+    width: 100vw !important;
+  }
+  
+}

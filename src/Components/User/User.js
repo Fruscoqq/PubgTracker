@@ -89,15 +89,15 @@ const User = () => {
   // }
   return (
     rs6Context.set_loading !== true && (
-      <div>
-        <h4 className="display-4 font-weight-normal py-3 my-text-light bg-dark">{name}
+      <div className="text-dark">
+        <h4 className="display-4 font-weight-normal py-3 px-3 text-white">{name}
         </h4>
-        <p className="display-4">K/D {(totalKills / totalDeaths).toFixed(1)}</p>
-        <div className="stats-container my-4">
-          <div className="row text-center bg-danger ">
+        <p className="display-4 text-light px-3">K/D {(totalKills / totalDeaths).toFixed(1)}</p>
+        <div className="stats-container my-4 text-light">
+          <div className="row text-center">
             {/* COL1 */}
-            <div className="col-4 ">
-              <div className="row bg-danger pt-5">
+            <div className="col-md-4 col-sm-12 border-right border-bottom border-light col1 userContainer">
+              <div className="row pt-5">
                 <div className="col-6 py-3">
                   <p className="lead">Kills</p>
                   <h4><i className="fas fa-crosshairs"></i> {totalKills}</h4>
@@ -107,7 +107,7 @@ const User = () => {
                   <h4><i className="fas fa-hands-helping" /> {totalAssists}</h4>
                 </div>
               </div>
-              <div className="row bg-danger pb-5">
+              <div className="row pb-5">
                 <div className="col-6 py-3">
                   <p className="lead">Chicken Dinners</p>
                   <h4><i className="fas fa-drumstick-bite" /> {totalWins}</h4>
@@ -119,7 +119,7 @@ const User = () => {
               </div>
             </div>
             {/* COL 2 */}
-            <div className="col-4 bg-info py-5">
+            <div className="col-md-4 col-sm-12 py-5 border-right border-bottom border-light userContainer">
               <div className="upper py-3">
                 <h4>Days Played</h4>
                 <p className="lead "><i className="fas fa-clock"></i> {totalDays}</p>
@@ -129,7 +129,7 @@ const User = () => {
                 <h3><i className="fas fa-stopwatch"></i> {(totalLongestTimeSurvived / 60).toFixed(2)} minutes</h3>
               </div>
             </div>
-            <div className="col-4 bg-light py-5">
+            <div className="col-md-4 col-sm-12 bg-light py-5 userContainer border-bottom border-light">
               <div className="upper py-3">
                 <h4>Boosts Used</h4>
                 <p className="lead"><i className="fas fa-bolt"></i> {totalBoosts}</p>
@@ -140,13 +140,13 @@ const User = () => {
               </div>
             </div>
           </div>
-          {/* Row 2 */}
-          <div className="row text-center">
-            <div className="col-4 bg-primary py-5 align-items-center">
+          {/* COL 3 */}
+          <div className="row text-center userSecond">
+            <div className="col-md-4 col-sm-12  py-5 align-items-center border-right border-bottom border-light">
               <h4 className="py-3">Damage Dealt</h4>
               <p className="display-4"><i className="fas fa-house-damage" /> {(totalDamageDealt / 1000).toFixed(1)}k</p>
             </div>
-            <div className="col-8 py-1 bg-warning">
+            <div className="col-md-8 col-sm-12 py-1 border-bottom border-light">
               <div className="row">
                 <div className="col-12">
                   <h4 className="py-3">Headshot Kills</h4>
@@ -161,34 +161,35 @@ const User = () => {
               </div>
             </div>
           </div>
-          <div className="row text-center">
-            <div className="col-6 bg-light py-5">
+
+          <div className="row text-center border-bottom userThird">
+            <div className="col-6 py-5 border-right">
               <h4 className="py-3">Daily Wins</h4>
               <p className="display-4"><i className="fas fa-trophy"></i> {totalDailyWins}</p>
             </div>
-            <div className="col-6 bg-dark py-5">
+            <div className="col-6 py-5">
               <h4 className="py-3">Longest Kill</h4>
               <p className="display-4"><i className="fas fa-ruler-vertical"></i> {totalLongestKill.toFixed(1)}</p>
             </div>
           </div>
-          <div className="row text-center">
-            <div className="col-2 bg-danger py-5">
+          <div className="row text-center text-light userBottom">
+            <div className="col-md-2 col-sm-12 py-5 border-bottom">
               <h4 className="py-3">Road Kills</h4>
               <p className="display-4"><i className="fas fa-car-crash"></i> {totalRoadKills}</p>
             </div>
-            <div className="col-2 bg-danger py-5">
+            <div className="col-md-2 col-sm-12 py-5 border-bottom">
               <h4 className="py-3">Revives</h4>
               <p className="display-4"><i className="fas fa-hands-helping"></i> {totalRevives}</p>
             </div>
-            <div className="col-4 bg-danger py-5">
+            <div className="col-md-4 col-sm-12 py-5 border-bottom">
               <h4 className="py-3">Ride Distance</h4>
               <p className="display-4"><i className="fas fa-ruler"></i> {(totalRideDistance / 1000).toFixed(1)} km</p>
             </div>
-            <div className="col-2 bg-danger py-5">
+            <div className="col-md-2 col-sm-12 py-5 border-bottom">
               <h4 className="py-3">Suicides</h4>
               <p className="display-4"><i className="fas fa-procedures"></i> {totalSuicides}</p>
             </div>
-            <div className="col-2 bg-danger py-5">
+            <div className="col-md-2 col-sm-12 py-5 border-bottom">
               <h4 className="py-3">Team Kills</h4>
               <p className="display-4"><i className="fas fa-ambulance"></i> {totalTeamKills}</p>
             </div>
